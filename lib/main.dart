@@ -26,24 +26,23 @@ class _ToDoScreenState extends State<ToDoScreen> {
     return TextField(controller: inputTextController);
   }
 
+  Widget outputToDoList() {
+    return Expanded(
+      child: ListView(
+        children: [
+          Text("여기에 To Do가 들어갈 예정 "),
+          Text("여기에 To Do가 들어갈 예정 2"),
+          Text("여기에 To Do가 들어갈 예정 3"),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('To Do List')),
-      body: Column(
-        children: [
-          inputToDoItem(),
-          Expanded(
-            child: ListView(
-              children: [
-                Text("여기에 To Do가 들어갈 예정 "),
-                Text("여기에 To Do가 들어갈 예정 2"),
-                Text("여기에 To Do가 들어갈 예정 3"),
-              ],
-            ),
-          ),
-        ],
-      ),
+      body: Column(children: [inputToDoItem(), outputToDoList()]),
     );
   }
 }
