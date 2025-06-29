@@ -22,13 +22,17 @@ class ToDoScreen extends StatefulWidget {
 class _ToDoScreenState extends State<ToDoScreen> {
   TextEditingController inputTextController = TextEditingController();
 
+  Widget inputToDoItem() {
+    return TextField(controller: inputTextController);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('To Do List')),
       body: Column(
         children: [
-          TextField(controller: inputTextController),
+          inputToDoItem(),
           Expanded(
             child: ListView(
               children: [
