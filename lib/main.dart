@@ -1,30 +1,30 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MySecondApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MySecondApp extends StatelessWidget {
+  const MySecondApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: const MyHomePage());
+    return MaterialApp(home: const ToDoScreen());
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+class ToDoScreen extends StatefulWidget {
+  const ToDoScreen({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<ToDoScreen> createState() => _ToDoScreenState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _ToDoScreenState extends State<ToDoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('To Do List 실험 앱')),
-      body: Center(child: Text('여기에 To Do가 들어갈 예정!')),
+      appBar: AppBar(title: Text('To Do List')),
+      body: Center(child: TextField('여기에 To Do가 들어갈 예정!')),
     );
   }
 }
