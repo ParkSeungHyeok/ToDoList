@@ -26,7 +26,14 @@ class _ToDoScreenState extends State<ToDoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('To Do List')),
-      body: Center(child: TextField(controller: inputTextController)),
+      body: Column(
+        children: [
+          TextField(controller: inputTextController),
+          Text("여기에 To Do가 들어갈 예정 "),
+          Text("여기에 To Do가 들어갈 예정 2"),
+          Text("여기에 To Do가 들어갈 예정 3"),
+        ],
+      ),
     );
   }
 }
