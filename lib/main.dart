@@ -29,9 +29,15 @@ class _ToDoScreenState extends State<ToDoScreen> {
       body: Column(
         children: [
           TextField(controller: inputTextController),
-          Text("여기에 To Do가 들어갈 예정 "),
-          Text("여기에 To Do가 들어갈 예정 2"),
-          Text("여기에 To Do가 들어갈 예정 3"),
+          Expanded(
+            child: ListView(
+              children: [
+                Text("여기에 To Do가 들어갈 예정 "),
+                Text("여기에 To Do가 들어갈 예정 2"),
+                Text("여기에 To Do가 들어갈 예정 3"),
+              ],
+            ),
+          ),
         ],
       ),
     );
