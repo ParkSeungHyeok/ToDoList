@@ -1,3 +1,3 @@
 # ToDoList App
 
-it is ToDO List App
+it is ToDo List App
